@@ -6,7 +6,6 @@
 		<link rel="stylesheet" href="cssChangerCouleur.css">
 		</head>
 	<body>
-	<h1 class="
 		<?php
 			$chaineAChanger="Jean petit qui danse";
 
