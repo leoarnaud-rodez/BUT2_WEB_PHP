@@ -3,12 +3,12 @@
 	<head>
 		<title>Inversion de Chaine</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="TP3.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/fontawesome.min.css" integrity="sha384-mj4mLShEAyWi4Bui9LmFkAjPYWof6WrG8DfS8ebHhjm4/MClMqMMHpQzehNk5HeM" crossorigin="anonymous">
-		</head>
+		<link rel="stylesheet" href="TP3.css">
+	</head>
 	<body>
-		<form method="get" action="">
+		<form method="get" action="TP3-2.php">
 			<div class="container">
 				<div class="row mb-3">
 					<div class="col-12">
@@ -23,11 +23,11 @@
 						<input type="text" name="prenom">
 					</div>
 					<div class="col-4">
-						Dipolme préparé
-						<select id="diplome" textarea="Selectionner dans la liste">
+						Dipolme préparé<br>
+						<select name="formation" textarea="Selectionner dans la liste">
 							<option value="">Selectionner dans la liste</option>
 							<option value="gea">BUT GEA</option>
-							<option value="info">BUT Informatique</option>
+							<option value="informatique">BUT Informatique</option>
 							<option value="qlio">BUT QLIO</option>
 							<option value="cj">BUT CJ</option>
 							<option value="infocom">BUT InfoCom</option>
@@ -35,7 +35,7 @@
 					</div>
 					<div class="col-12">
 						<label>Votre question :</label><br>
-						<input type="text" name="question">
+						<textarea type="text" name="question"></textarea>
 					</div>
 					<div class="col-12">
 						<input type="submit" value="Envoyer le formulaire">
