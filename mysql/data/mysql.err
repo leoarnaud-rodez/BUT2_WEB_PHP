@@ -362,3 +362,26 @@
 2026-09-21T13:33:13.806240Z 0 [System] [MY-015015] [Server] MySQL Server - start.
 2026-09-21T13:33:13.889666Z 0 [System] [MY-010116] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe (mysqld 8.2.0) starting as process 12352
 2026-09-21T13:33:14.152930Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-09-21T13:33:25.676592Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-09-21T13:33:32.727418Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-09-21T13:33:32.728385Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-09-21T13:33:32.992686Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2026-09-21T13:33:32.992963Z 0 [System] [MY-010931] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe: ready for connections. Version: '8.2.0'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2026-09-25T12:41:08.217388Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-09-25T12:41:08.285365Z 0 [System] [MY-010116] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe (mysqld 8.2.0) starting as process 2152
+2026-09-25T12:41:08.928053Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-09-25T12:41:22.254659Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-09-25T12:41:30.908605Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2026-09-25T12:41:30.912021Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2026-09-25T12:41:31.460345Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-09-25T12:41:31.460878Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-09-25T12:41:31.949910Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2026-09-25T12:41:31.950504Z 0 [System] [MY-010931] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe: ready for connections. Version: '8.2.0'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2026-09-25T13:46:25.574296Z 212 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.2.0).
+2026-09-25T13:46:25.574748Z 0 [System] [MY-013105] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe: Normal shutdown.
+2026-09-25T13:46:26.922415Z 0 [System] [MY-010910] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe: Shutdown complete (mysqld 8.2.0)  MySQL Community Server - GPL.
+2026-09-25T13:46:26.923530Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-09-29T12:38:38.982712Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-09-29T12:38:39.099040Z 0 [System] [MY-010116] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe (mysqld 8.2.0) starting as process 16572
+2026-09-29T12:38:39.415003Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-09-29T12:38:52.423862Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
