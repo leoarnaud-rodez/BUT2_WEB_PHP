@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Les excuses du lundi matin</title>
+	  
+		<link href="css/monStyle.css" rel="stylesheet">
+		
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row cadre ">	 
+				<div class="col-12">
+					<h1>Tous les lundis, une excuse différente ! </h1>
+					Générez votre excuse du lundi matin en selectionnant les différents champs.<br>
+				</div>
+			</div>
+		
+			<div class="row cadre ">	 
+				<div class="col-12">
+					<form action="lundiMatinDepartV2.php" method="post">
+						<select name='var1'><option value='123'>Tôt dans la matinée,</option><option value='2'>Vers 4h du matin,</option><option value='3'>Hier soir,</option><option value='4'>Tard dans la nuit,</option><option value='5'>En pleine nuit,</option></select><br><select name='var2'><option value='1'>alors que</option><option value='2'>pendant que</option><option value='3'>au moment où</option><option value='4'>tandis que</option><option value='5'>comme</option><option value='6'>cependant que</option></select><br><select name='var3'><option value='1'>je dormais après avoir relu pour la 3eme fois le cours Management des SI,</option><option value='2'>je sommeillais en attendant de me lever pour mon jogging quotidien de 5h du matin,</option><option value='3'>je somnollais après avoir passé en revue le document sur le CSS,</option><option value='4'>je m'étais assoupi sur une des oeuvres passionnantes de Friedrich Wilheim Nietzsche,</option><option value='5'>je me reposais après avoir pratiqué 2h intenses de C++,</option><option value='6'>je m'étais endormis sur un article fort intéressant du 01 Informatique,</option><option value='7'>je faisais un somme après avoir fini de traduire Guerre &amp; Paix en japonais,</option><option value='8'>je m'étais assoupi sur la brillante émission 'Chasse et Pêche',</option></select><br><select name='var4'><option value='1'>mon chat</option><option value='2'>mon chien</option><option value='3'>mon poisson rouge</option><option value='4'>mon perroquet</option><option value='5'>mon sanglier domestique</option><option value='6'>ma colocataire</option><option value='7'>mon hamster</option></select><br><select name='var5'><option value='1'>a joué avec le fil électrique de</option><option value='2'>s'est pris les pates dans le fil électrique de</option><option value='3'>a appuyé par mégarde sur le bouton OFF de</option><option value='4'>a débranché</option><option value='5'>a renversé du soda sur</option><option value='6'>a fait tomber dans la baignoire</option><option value='7'>a rebooté</option></select><br><select name='var6'><option value='1'>mon radio-réveil qui n'a donc pas sonné, et ce n'est</option><option value='2'>mon smartphone qui n'a donc pas sonné, et ce n'est</option></select><br><select name='var7'><option value='1'>que lorsque les pompiers sont entrés en hurlant 'AU FEU !'</option><option value='2'>qu'au moment où les huissiers (venus pour le voisin) ont enfoncé la porte</option><option value='3'>qu'avec l'arrivée du SAMU, venu chercher le voisin d'en dessous</option><option value='4'>qu'après l'entrée fracassante de la SPA</option><option value='5'>qu'au moment où Spiderman a sonné à la porte</option><option value='6'>que quand le plombier est venu réparer l'inondation</option><option value='7'>qu'avec la visite d'un vendeur d'encyclopédies</option></select><br><select name='var8'><option value='1'>que je me suis réveillé.</option><option value='2'>que mon collocataire m'a reveillé.</option><option value='3'>que j'ai réalisé qu'il était trop tard pour venir à l'IUT ce matin.</option><option value='4'>que j'ai bondi hors de mon lit pour me ruer à l'IUT.</option></select><br>						<br>
+						<input type="submit" value="Générer l'excuse">
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

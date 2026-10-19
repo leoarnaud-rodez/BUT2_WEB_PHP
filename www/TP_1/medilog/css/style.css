@@ -1,0 +1,109 @@
+body {
+    background: linear-gradient(to bottom, #8EB3C8, #FFFFFF);
+    color: #AE3030;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.cadre {
+    border: 3px solid #1B4B67;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #8EB3C8, #FFFFFF);
+    margin: 5px;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.texte-grand {
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo-entete {
+    height: 170px;
+    border-radius: 15px;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.zone-mode-emploi {
+    background: url('../images/devanture.jpg') center/cover no-repeat;
+    min-height: 250px;
+}
+
+.zone-icones {
+    background: url('../images/devanture2.jpg') center/cover no-repeat;
+    min-height: 250px;
+}
+
+.icone-img {
+    height: 150px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    transition: transform 0.3s ease;
+}
+
+.icone-img:hover {
+    transform: scale(1.2);
+}
+
+.form-label {
+    color: #000000;
+    font-weight: bold;
+}
+
+.table {
+    color: #000000;
+}
+
+.table th {
+    color: #000000;
+}
+
+.menu-titre {
+    color: #AE3030;
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #1B4B67;
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 6px 15px;
+}
+
+.nav-link:visited {
+    color: gray;
+}
+
+.logo-iut {
+    max-width: 100px;
+    display: block;
+    margin: 10px auto;
+}
+
+.fa-spinner {
+    animation: fa-spin 2s infinite linear;
+}

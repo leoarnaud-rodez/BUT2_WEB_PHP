@@ -14,120 +14,119 @@
 			} else {
 				$leNom = "";
 			}
+
 			if (isset($_POST['prenom'])) {
 				$lePrenom = $_POST['prenom'];
 			} else {
 				$lePrenom = "";
 			}
-			if (isset($_POST['question'])) {
-				$laQuestion = $_POST['question'];
-			} else {
-				$laQuestion = "";
-			}
+
 			if (isset($_POST['formation'])) {
 				$laFormation = $_POST['formation'];
 			} else {
 				$laFormation = "";
 			}
+
+			if (isset($_POST['question'])) {
+				$laQuestion = $_POST['question'];
+			} else {
+				$laQuestion = "";
+			}
+
+			// Vérification si toutes les données sont valides
+			if (!empty($leNom) && !empty($lePrenom) && !empty($laFormation) && !empty($laQuestion)) {
 		?>
-		<form method="post" action="TP3-3.php">
-			<div class="container">
-				<div class="row mb-3">
-					<div class="col-12">
-						<h1>Formulaire</h1>
-					</div>
-					<div class="col-4">
-						<label>Nom</label><br>
-						<input type="text" name="nom">
-					</div>
-					<div class="col-4">
-						<label>Prénom</label><br>
-						<input type="text" name="prenom">
-					</div>
-					<div class="col-4">
-						Dipolme préparé<br>
-						<select name="formation" textarea="Selectionner dans la liste">
-							<option value="">Selectionner dans la liste</option>
-							<option value="gea">BUT GEA</option>
-							<option value="informatique">BUT Informatique</option>
-							<option value="qlio">BUT QLIO</option>
-							<option value="cj">BUT CJ</option>
-							<option value="infocom">BUT InfoCom</option>
-						</select>
-					</div>
-					<div class="col-12">
-						<label>Votre question :</label><br>
-						<textarea type="text" name="question"></textarea>
-					</div>
-					<div class="col-12">
-						<input type="submit" value="Envoyer le formulaire">
+				<div class="container">
+					<div class="row mb-3">
+						<div class="col-4">
+							<?php echo '<label class="ok">Votre Nom : '.htmlspecialchars($leNom).'</label>'; ?>
+						</div>
+						<div class="col-4">
+							<?php echo '<label class="ok">Votre Prénom : '.htmlspecialchars($lePrenom).'</label>'; ?>
+						</div>
+						<div class="col-4">
+							<?php
+								if ($laFormation == "gea") { $nomFormation = "BUT GEA"; }
+								if ($laFormation == "informatique") { $nomFormation = "BUT Informatique"; }
+								if ($laFormation == "qlio") { $nomFormation = "BUT QLIO"; }
+								if ($laFormation == "cj") { $nomFormation = "BUT CJ"; }
+								if ($laFormation == "infocom") { $nomFormation = "BUT InfoCom"; }
+								echo '<label class="ok">Votre Diplôme : '.htmlspecialchars($nomFormation).'</label>';
+							?>
+						</div>
+						<div class="col-12">
+							<?php echo '<label class="ok">Votre question : '.htmlspecialchars($laQuestion).'</label>'; ?>
+						</div>
 					</div>
 				</div>
-			</div>
-		</form>
-		<div class="container">
-			<div class="row mb-3">
-				<div class="col-4">
-					<?php
-					    if (isset($_POST['nom'])) {
-							$leNom = $_POST['nom'];
-						} else {
-							$leNom = "";
-						}
-						
-						if (!empty($leNom)) {
-							echo "<label class="."ok".">Votre nom : $leNom</label>";
-						} else {
-							echo "<label class="."erreur".">Merci de rentrer votre nom</label>";
-						}
-					?>
-				</div>
-				<div class="col-4">
-					<?php
-					    if (isset($_POST['prenom'])) {
-							$lePrenom = $_POST['prenom'];
-						} else {
-							$lePrenom = "";
-						}
-						
-						if (!empty($lePrenom)) {
-							echo "<label class="."ok".">Votre prenom : $lePrenom</label>";
-						} else {
-							echo "<label class="."erreur".">Merci de rentrer votre prénom</label>";
-						}
-					?>
-				</div>
-				<div class="col-4">
-					<?php
-					    if (isset($_POST['formation'])) {
-							$laFormation = $_POST['formation'];
-						} else {
-							$laFormation = "";
-						}
-						
-						if (!empty($laFormation)) {
-							echo "<label class="."ok".">Votre formation : $laFormation</label>";
-						} else {
-							echo "<label class="."erreur".">Merci de rentrer votre formation</label>";
-						}
-					?>
-				</div>
-				<div class="col-12">
-					<?php
-					    if (isset($_POST['question'])) {
-							$laQuestion = $_POST['question'];
-						} else {
-							$laQuestion = "";
-						}
-						
-						if (!empty($laQuestion)) {
-							echo "<label class="."ok".">Votre question : $laQuestion</label>";
-						} else {
-							echo "<label class="."erreur".">Merci de rentrer votre question</label>";
-						}
-					?>
-				</div>
-			</div>
-		</div>
+		<?php
+			} else {
+		?>
+				<form method="post" action="TP3-3.php">
+					<div class="container">
+						<div class="row mb-3">
+							<div class="col-12">
+								<h1>Formulaire</h1>
+							</div>
+							<div class="col-4">
+								<?php
+									if (!empty($leNom)) {
+										echo '<label class="ok">Nom :</label>';
+									} else {
+										echo '<label class="erreur">Nom :</label>';
+									}
+								?>
+								<br>
+								<input type="text" name="nom" value="<?php echo htmlspecialchars($leNom); ?>">
+							</div>
+							<div class="col-4">
+								<?php
+									if (!empty($lePrenom)) {
+										echo '<label class="ok">Prénom :</label>';
+									} else {
+										echo '<label class="erreur">Prénom :</label>';
+									}
+								?>
+								<br>
+								<input type="text" name="prenom" value="<?php echo htmlspecialchars($lePrenom); ?>">
+							</div>
+							<div class="col-4">
+								<?php
+									if (!empty($laFormation)) {
+										echo '<label class="ok">Diplôme préparé :</label>';
+									} else {
+										echo '<label class="erreur">Diplôme préparé :</label>';
+									}
+								?>
+								<br>
+								<select name="formation">
+									<option value="" <?php if ($laFormation == "") { echo "selected"; } ?>>Sélectionner dans la liste</option>
+									<option value="gea" <?php if ($laFormation == "gea") { echo "selected"; } ?>>BUT GEA</option>
+									<option value="informatique" <?php if ($laFormation == "informatique") { echo "selected"; } ?>>BUT Informatique</option>
+									<option value="qlio" <?php if ($laFormation == "qlio") { echo "selected"; } ?>>BUT QLIO</option>
+									<option value="cj" <?php if ($laFormation == "cj") { echo "selected"; } ?>>BUT CJ</option>
+									<option value="infocom" <?php if ($laFormation == "infocom") { echo "selected"; } ?>>BUT InfoCom</option>
+								</select>
+							</div>
+							<div class="col-12">
+								<?php
+									if (!empty($laQuestion)) {
+										echo '<label class="ok">Votre question :</label>';
+									} else {
+										echo '<label class="erreur">Votre question :</label>';
+									}
+								?>
+								<br>
+								<textarea name="question"><?php echo htmlspecialchars($laQuestion); ?></textarea>
+							</div>
+							<div class="col-12">
+								<input type="submit" value="Envoyer le formulaire">
+							</div>
+						</div>
+					</div>
+				</form>
+		<?php
+			}
+		?>
 	</body>
 </html>
