@@ -33,21 +33,49 @@
                 </div>
                 <div class="mb-3">
                     <label for="type" class="form-label text-center d-block">Type de médicament :</label>
-                    <select class="form-select" id="type">
-                        <option selected>Collyre</option>
-                        <option>Comprimé</option>
-                        <option>Effervescent</option>
-                        <option>Gellule</option>
-                        <option>Pommade</option>
-                    </select>
+                    <?php 
+						require '../medilogModele.php';
+
+						try{
+							$pdo = connecte();
+							$resultats = recupTypeMedicament($pdo);
+							
+								echo "<select class='form-select' name='typeMedicament'>" ;																
+								
+								while($ligne = $resultats->fetch() ) { 									
+									echo "<option>";															
+										echo "<value>".$ligne->Type;						
+									echo "</option>";															
+								}
+								echo "</select>" ;		
+							
+						}catch(PDOException $e){
+							//Il y a eu une erreur 
+							echo "<h1>Erreur BD ".$e->getMessage();
+						}
+					?>
                 </div>
                 <div class="mb-3">
                     <label for="labo" class="form-label text-center d-block">Laboratoire :</label>
-                    <select class="form-select" id="labo">
-                        <option selected>MERK</option>
-                        <option>SANDOZ</option>
-                        <option>UPSA</option>
-                    </select>
+                    <?php 
+
+						try{
+							$resultats = recupLaboratoire($pdo);
+							
+								echo "<select class='form-select' name='typeLaboratoire'>" ;																
+								
+								while($ligne = $resultats->fetch() ) { 									
+									echo "<option>";															
+										echo "<value>".$ligne->Labo;						
+									echo "</option>";															
+								}
+								echo "</select>" ;		
+							
+						}catch(PDOException $e){
+							//Il y a eu une erreur 
+							echo "<h1>Erreur BD ".$e->getMessage();
+						}
+					?>
                 </div>
                 <div class="text-center">
                     <input type="submit" class="btn btn-light border w-100" value="Envoyer">
@@ -58,32 +86,26 @@
         <div class="cadre">
             <h2>Résultat de la recherche</h2>
             <div class="table-responsive">
-                <table class="table table-bordered text-center align-middle">
-                    <thead>
-                        <tr class="table-light">
-                            <th>Désignation</th>
-                            <th>Présentation</th>
-                            <th>Laboratoire</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Aspirine 500mg</td>
-                            <td>Effervescent</td>
-                            <td>UPSA</td>
-                        </tr>
-                        <tr>
-                            <td>Aspirine 1000mg</td>
-                            <td>Comprimé</td>
-                            <td>MERK</td>
-                        </tr>
-                        <tr>
-                            <td>Doliprane 1000mg</td>
-                            <td>Comprimé</td>
-                            <td>SANDOZ</td>
-                        </tr>
-                    </tbody>
-                </table>
+				<?php 
+
+					try{
+						$resultats = recupResultatRecherche($pdo);
+						
+							echo "<select class='form-select'>" ;																
+							
+							while($ligne = $resultats->fetch() ) { 									
+								echo "<option>";															
+									echo "<value>".$ligne->Type;						
+								echo "</option>";															
+							}
+							echo "</table>" ;	
+						echo "</div>";	
+						
+					}catch(PDOException $e){
+						//Il y a eu une erreur 
+						echo "<h1>Erreur BD ".$e->getMessage();
+					}
+				?>
             </div>
         </div>
 
@@ -94,9 +116,9 @@
                         <i class="fa fa-sitemap"></i> Menu :
                     </div>
                     <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
-                        <a href="../index.html" class="nav-link"><i class="fa fa-home"></i> Accueil</a>
-                        <a href="recherche.html" class="nav-link"><i class="fa fa-search"></i> Recherche d'un médicament</a>
-                        <a href="ordonnance.html" class="nav-link"><i class="fa fa-id-card"></i> Création ordonnance</a>
+                        <a href="../index.php" class="nav-link"><i class="fa fa-home"></i> Accueil</a>
+                        <a href="recherche.php" class="nav-link"><i class="fa fa-search"></i> Recherche d'un médicament</a>
+                        <a href="ordonnance.php" class="nav-link"><i class="fa fa-id-card"></i> Création ordonnance</a>
                     </div>
                 </div>
             </div>

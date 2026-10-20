@@ -126,9 +126,9 @@
                         <i class="fa fa-sitemap"></i> Menu :
                     </div>
                     <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
-                        <a href="../index.html" class="nav-link"><i class="fa fa-home"></i> Accueil</a>
-                        <a href="recherche.html" class="nav-link"><i class="fa fa-search"></i> Recherche d'un médicament</a>
-                        <a href="ordonnance.html" class="nav-link"><i class="fa fa-id-card"></i> Création ordonnance</a>
+                        <a href="../index.php" class="nav-link"><i class="fa fa-home"></i> Accueil</a>
+                        <a href="recherche.php" class="nav-link"><i class="fa fa-search"></i> Recherche d'un médicament</a>
+                        <a href="ordonnance.php" class="nav-link"><i class="fa fa-id-card"></i> Création ordonnance</a>
                     </div>
                 </div>
             </div>
