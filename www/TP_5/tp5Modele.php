@@ -19,7 +19,7 @@
 			];
 			
 			return new PDO($dsn, $user, $pass, $options); // Connexion PDO	
-		} catch (Exception $e) { // Excpetion pour être large
+		} catch (PDOException $e) {
 			throw $e;
 		}
 	}
@@ -27,9 +27,20 @@
 	function recupCategorie($pdo) {
 			
 		try {	
-			$requete = "SELECT DISTINCT DESIGNATION, CODE_TYPE FROM c_types ORDER BY DESIGNATION ASC"; 		
+			$requete = "SELECT DESIGNATION, CODE_TYPE FROM c_types ORDER BY DESIGNATION ASC"; 		
 			return $pdo->query($requete);		
-		} catch (Exception $e) { // Excpetion pour être large
+		} catch (PDOException $e) {
+			throw $e;
+		}
+	}
+	
+	function insererClient($pdo, $codeClient, $nomMagasin, $nomResponsable, $adresseLigne1, $adresseLigne2, $codePostal, $Categorie, $numTel, $mail) {
+		
+		try {
+			$requete = "INSERT INTO `clients` (`ID_CLIENT`, `CODE_CLIENT`, `NOM_MAGASIN`, `ADRESSE_1`, `ADRESSE_2`, `CODE_POSTAL`, `VILLE`, `RESPONSABLE`, `TELEPHONE`, `EMAIL`, `TYPE_CLIENT`) VALUES
+						(1, $codeClient, $codeClient, $nomMagasin, $nomResponsable, $adresseLigne1, $adresseLigne2, $codePostal, $numTel, $mail, $Categorie);";
+			return $pdo->query($requete);
+		} catch (PDOException $e) {
 			throw $e;
 		}
 	}
