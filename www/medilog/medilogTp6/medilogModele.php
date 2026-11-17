@@ -45,22 +45,52 @@
 	
 	function recupResultatRecherche($pdo, $designation, $type, $labo) {
 		try {
-			// un truc vide devien % pour tout accepter
-			if ($type == "") {
-				$type = "%";
+			$debReq   = "SELECT Designation, Type, Labo FROM medicaments";
+			$finReq   = "ORDER BY Designation";
+			$criteres = "";
+			
+			if (___) {
+				if (___) {
+					___
+				}
 			}
-			if ($labo == "") {
-				$labo = "%";
+			/*
+			 * si designation est ""
+			 * si pas de where ajout d'un where
+			 * ajout de désignation Like %designation%
+			 */
+			if (___) {
+				if (___) {
+					___
+				}
 			}
-
-			$requete = "SELECT Designation, Type, Labo FROM medicaments
-						WHERE Designation LIKE ".$pdo->quote("%".$designation."%")."
-						AND Type LIKE ".$pdo->quote($type)."
-						AND Labo LIKE ".$pdo->quote($labo)."
-						ORDER BY Designation";
-			return $pdo->query($requete);
+			/*
+			 * si type est ""
+			 * si pas de where ajout d'un where
+			 * sinon ajout d'un and
+			 * ajout de type = ___
+			 */
+			if (___) {
+				if (___) {
+					___
+				}
+			}
+			/*
+			 * si labo est ""
+			 * si pas de where ajout d'un where
+			 * sinon ajout d'un and
+			 * ajout de labo = ___
+			 */
+			$requete = $debReq . $criteres . $finReq;
+			$stmt = $pdo->prepare($requete);
+			$stmt->bindParam();
+			
+			return $stmt->execute();
 		} catch (Exception $e) { // Excpetion pour être large
 			throw $e;
 		}
+		
+
+		
 	}
 ?>

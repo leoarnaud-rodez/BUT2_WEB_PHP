@@ -34,12 +34,13 @@
 		}
 	}
 	
-	function insererClient($pdo, $codeClient, $nomMagasin, $nomResponsable, $adresseLigne1, $adresseLigne2, $codePostal, $Categorie, $numTel, $mail) {
-		
+	function insererClient($pdo, $codeClient, $nomMagasin, $nomResponsable, $adresseLigne1, $adresseLigne2, $codePostal, $ville, $Categorie, $numTel, $mail) {
 		try {
-			$requete = "INSERT INTO `clients` (`ID_CLIENT`, `CODE_CLIENT`, `NOM_MAGASIN`, `ADRESSE_1`, `ADRESSE_2`, `CODE_POSTAL`, `VILLE`, `RESPONSABLE`, `TELEPHONE`, `EMAIL`, `TYPE_CLIENT`) VALUES
-						(1, $codeClient, $codeClient, $nomMagasin, $nomResponsable, $adresseLigne1, $adresseLigne2, $codePostal, $numTel, $mail, $Categorie);";
-			return $pdo->query($requete);
+			$requete = "INSERT INTO `clients` (`CODE_CLIENT`, `NOM_MAGASIN`, `ADRESSE_1`, `ADRESSE_2`, `CODE_POSTAL`, `VILLE`, `RESPONSABLE`, `TELEPHONE`, `EMAIL`, `TYPE_CLIENT`) VALUES
+						(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			$stmt = $pdo->prepare($requete);
+			$stmt->execute([$codeClient, $nomMagasin, $adresseLigne1, $adresseLigne2, $codePostal, $ville, $nomResponsable, $numTel, $mail, $Categorie]);
+			return $pdo->lastInsertId();
 		} catch (PDOException $e) {
 			throw $e;
 		}

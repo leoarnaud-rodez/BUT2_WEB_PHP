@@ -96,7 +96,7 @@
                                         if ($ligne->Labo == $laboChoisi) {
                                             echo "<option selected>";
                                         } else {
-                                            echo "<option>";
+                                            echo "<option>"; // peut etre interessant de mette value ici aussi
                                         }
                                         echo htmlspecialchars($ligne->Labo);
                                         echo "</option>";
@@ -143,7 +143,7 @@
                                 echo "<tr>";
                                     echo "<td>".htmlspecialchars($ligne->Designation)."</td>";
                                     echo "<td>".htmlspecialchars($ligne->Type)."</td>";
-                                    echo "<td>".htmlspecialchars($ligne->Lab)."</td>";
+                                    echo "<td>".htmlspecialchars($ligne->Labo)."</td>";
                                 echo "</tr>";
                             }
                         ?>

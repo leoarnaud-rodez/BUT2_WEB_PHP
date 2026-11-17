@@ -606,3 +606,23 @@
 2026-11-13T13:46:28.743191Z 0 [System] [MY-015015] [Server] MySQL Server - start.
 2026-11-13T13:46:28.923725Z 0 [System] [MY-010116] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe (mysqld 8.2.0) starting as process 17476
 2026-11-13T13:46:29.049760Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-11-13T13:46:35.354314Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-11-13T13:46:38.668408Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-11-13T13:46:38.668721Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-11-13T13:46:38.840010Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2026-11-13T13:46:38.840124Z 0 [System] [MY-010931] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe: ready for connections. Version: '8.2.0'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2026-11-13T14:30:40.714003Z 37 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.2.0).
+2026-11-13T14:30:40.714812Z 0 [System] [MY-013105] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe: Normal shutdown.
+2026-11-13T14:30:41.443467Z 0 [System] [MY-010910] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe: Shutdown complete (mysqld 8.2.0)  MySQL Community Server - GPL.
+2026-11-13T14:30:41.444634Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-11-16T13:22:31.644548Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-11-16T13:22:31.864232Z 0 [System] [MY-010116] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe (mysqld 8.2.0) starting as process 10176
+2026-11-16T13:22:32.452311Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-11-16T13:22:48.809021Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-11-16T13:22:58.586662Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-11-16T13:22:58.587056Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-11-16T13:22:59.082976Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2026-11-16T13:22:59.083096Z 0 [System] [MY-010931] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe: ready for connections. Version: '8.2.0'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2026-11-17T09:49:44.309958Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-11-17T09:49:44.372767Z 0 [System] [MY-010116] [Server] C:\oracle_install\core\mysql\bin\mysqld_z.exe (mysqld 8.2.0) starting as process 6668
+2026-11-17T09:49:44.767458Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
